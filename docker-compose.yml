@@ -1,0 +1,31 @@
+version: '2'
+services:
+  HeroLords:
+    image: einari/bukkit
+    container_name: herolords
+    ports:
+      - "25565:25565"
+    volumes:
+      - /MinecraftLocal/HeroLords:/data
+    environment: 
+      - EULA=true
+
+  Kodeklubben:
+    image: einari/bukkit
+    container_name: kodeklubben
+    ports:
+      - "25566:25565"
+    volumes:
+      - /MinecraftLocal/Kodeklubben:/data
+    environment: 
+      - EULA=true
+
+  GirlPower:
+    image: einari/bukkit
+    container_name: girlpower
+    ports:
+      - "25567:25565"
+    volumes:
+      - /MinecraftLocal/GirlPower:/data
+    environment: 
+      - EULA=true
